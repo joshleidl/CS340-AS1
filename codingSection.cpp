@@ -24,10 +24,24 @@ class inputNode
         void setInt(int i) {value = i; flag = true;}
 };
 
-string infixToPostfix(string toConvert)
+inputNode* infixToPostfix(string toConvert)
 {
-    //I'll start with a basic case
-    return " ";
+    int counter = 0;
+    string entry;
+    
+    while(toConvert[counter] != ' ')
+    {
+        if (counter + 1 < toConvert.length() && toConvert[counter] == '-' && toConvert[counter + 1] != ' ')
+        {
+            //likely case of a negative number
+        }
+        else
+
+        
+        counter++;
+    }
+    
+    entry = toConvert.substr(0, counter);
 }
 
 int main()

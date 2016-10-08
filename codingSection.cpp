@@ -24,24 +24,21 @@ class inputNode
         void setInt(int i) {value = i; flag = true;}
 };
 
-inputNode* infixToPostfix(string toConvert)
+class nodeList
 {
-    int counter = 0;
-    string entry;
-    
-    while(toConvert[counter] != ' ')
-    {
-        if (counter + 1 < toConvert.length() && toConvert[counter] == '-' && toConvert[counter + 1] != ' ')
-        {
-            //likely case of a negative number
-        }
-        else
-
+    private:
+        inputNode *head;
         
-        counter++;
-    }
+    public:
+        nodeList() {head = NULL;}
+        nodeList(inputNode* h) {head = h;}
+        inputNode* getHead() {return head;}
+        void setHead(inputNode* h) {head = h;}
+};
+
+inputNode* tokenizeString(string s)
+{
     
-    entry = toConvert.substr(0, counter);
 }
 
 int main()
